@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="backgrounds">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gold_color">#F7A604</color>
+    <color name="boxbg">#1F1F1F</color>
+    <color name="line"> #979797</color>
+    <color name="no_finish">#FE4544</color>
+    <color name="no_finsh_text">#999999</color>
+    <color name="finish_glod">#FEB544</color>
+    <color name="backg">#41403E</color>
+
+</resources>

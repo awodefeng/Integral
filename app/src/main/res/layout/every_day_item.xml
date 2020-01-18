@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/backgrounds"
+    android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/task_name"
+            android:layout_marginTop="8.5px"
+            android:text="@string/exchange_dial"
+            style="@style/tasktextStyle" />
+
+    <LinearLayout
+        android:layout_below="@+id/task_name"
+        android:id="@+id/finsh_state"
+        android:layout_marginLeft="4px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/finsih"
+            android:textColor="@color/no_finsh_text"
+            android:text="完成"
+            android:textSize="18px"
+            android:layout_below="@+id/task_name"
+            android:layout_marginTop="0.5px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/tv_stsk_number"
+            android:textColor="@color/no_finsh_text"
+            android:text="0/1"
+            android:textSize="18px"
+            android:layout_marginTop="0.5px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/finsh_number"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="14.5px"
+            android:textColor="@color/no_finish"
+            android:textSize="28px"
+            android:layout_toRightOf="@+id/task_name"
+            android:text="@string/no_finish"
+            android:visibility="visible"
+            style="@style/commonTvstyle" />
+
+        <TextView
+            android:id="@+id/finsh_get_gold"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/task_name"
+            android:layout_marginLeft="88px"
+            android:layout_marginTop="12.5px"
+            android:textColor="@color/finish_glod"
+            android:textSize="32px"
+            style="@style/commonTvstyle"
+            android:text=""/>
+    <View
+        android:layout_below="@+id/finsh_state"
+        android:layout_marginTop="4.5px"
+        style="@style/horizontal_lines"/>
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/backgrounds"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/open_box"
+        android:layout_marginTop="3px"
+        android:text="@string/open_box"
+        android:layout_marginLeft="5px"
+        style="@style/tasktextStyle"/>
+    
+    <TextView
+        android:id="@+id/tv_datastamp"
+        android:layout_below="@+id/open_box"
+        android:textColor="@color/no_finsh_text"
+        android:text="@string/time"
+        android:textSize="19px"
+        android:layout_marginLeft="5px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/get_gold"
+        android:layout_marginLeft="85px"
+        android:layout_toRightOf="@+id/open_box"
+        android:text="@string/my_gold"
+        android:textColor="@color/finish_glod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36px"/>
+    <View
+        android:layout_below="@+id/tv_datastamp"
+        android:layout_marginTop="7px"
+        style="@style/horizontal_lines"/>
+
+
+
+</RelativeLayout>

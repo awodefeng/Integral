@@ -1,0 +1,78 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="textViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="tasktextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">22px</item>
+        <item name="android:layout_marginLeft">4px</item>
+    </style>
+
+
+
+
+    //横向的线条
+    <style name="horizontal_line">
+        <item name="android:layout_marginLeft">10px</item>
+        <item name="android:layout_marginRight">4px</item>
+        <item name="android:layout_marginTop">8px</item>
+        <item name="android:layout_width">226px</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/line</item>
+    </style>
+    <style name="horizontal_lines">
+        <item name="android:layout_marginTop">4.5px</item>
+        <item name="android:layout_width">240px</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/line</item>
+    </style>
+
+    <style name="commonTvstyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <declare-styleable name="GifTempletView">
+        <attr name="gif" format="reference" />
+        <attr name="paused" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CustomTheme">
+        <attr name="gifViewStyle" format="reference" />
+    </declare-styleable>
+    <style name="Widget_GifView"></style>
+
+    <style name="MyDialogStyle">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <!-- 背景透明 -->
+    <item name="android:windowFrame">@null</item>
+    <!-- 边框 -->
+    <item name="android:windowNoTitle">true</item>
+    <!-- 无标题 -->
+    <item name="android:windowIsFloating">true</item>
+    <!-- 是否浮现在activity之上 -->
+    <item name="android:windowIsTranslucent">true</item>
+    <!-- 半透明 -->
+    <item name="android:windowContentOverlay">@null</item>
+    <!-- 内容覆盖 -->
+    <!-- <item name="android:src">@drawable/loading_bg</item> -->
+    <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    <!-- 窗口样式Dialog -->
+    <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+</resources>

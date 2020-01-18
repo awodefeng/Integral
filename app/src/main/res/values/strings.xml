@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">XunIntegral</string>
+    <string name="my_gold_text">我的金币</string>
+    <string name="my_gold">0</string>
+    <string name="every_day_task">每日任务</string>
+    <string name="exchange_dial">兑换表盘</string>
+    <string name="no_finish">未完成</string>
+    <string name="income">收入</string>
+    <string name="exchange">兑换</string>
+    <string name="randowecp">+20金币</string>
+    <string name="open_box">开宝箱</string>
+    <string name="time">12/10 09.26</string>
+    <string name="no_get_Golad1">暂无金币收入</string>
+    <string name="no_get_Golad2">完成每日任务</string>
+    <string name="no_get_Golad3">赚取金币</string>
+    <string name="exhange_gold">暂无金币消耗</string>
+    <string name="lucky_bag_exchange_full_toast">已兑换过，请明日再来</string>
+    <string name="step_finsh">计步达标</string>
+</resources>
