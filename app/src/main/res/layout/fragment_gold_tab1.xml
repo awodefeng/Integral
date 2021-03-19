@@ -24,8 +24,8 @@
 
     <TextView
         android:id="@+id/get_gold"
-        android:layout_marginLeft="85px"
-        android:layout_toRightOf="@+id/open_box"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight = "10dp"
         android:text="@string/my_gold"
         android:textColor="@color/finish_glod"
         android:layout_width="wrap_content"

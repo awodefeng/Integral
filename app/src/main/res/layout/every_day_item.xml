@@ -19,7 +19,7 @@
         <TextView
             android:id="@+id/finsih"
             android:textColor="@color/no_finsh_text"
-            android:text="完成"
+            android:text="@string/finsh"
             android:textSize="18px"
             android:layout_below="@+id/task_name"
             android:layout_marginTop="0.5px"
@@ -29,7 +29,7 @@
         <TextView
             android:id="@+id/tv_stsk_number"
             android:textColor="@color/no_finsh_text"
-            android:text="0/1"
+            android:text="@string/stsk_number"
             android:textSize="18px"
             android:layout_marginTop="0.5px"
             android:layout_width="wrap_content"
@@ -57,8 +57,7 @@
             android:layout_marginTop="12.5px"
             android:textColor="@color/finish_glod"
             android:textSize="32px"
-            style="@style/commonTvstyle"
-            android:text=""/>
+            style="@style/commonTvstyle"/>
     <View
         android:layout_below="@+id/finsh_state"
         android:layout_marginTop="4.5px"

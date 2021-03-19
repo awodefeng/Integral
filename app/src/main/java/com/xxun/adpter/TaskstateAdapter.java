@@ -39,10 +39,10 @@ public class TaskstateAdapter extends BaseAdapter {
         if (convertView == null) {
             holder = new ViewHolder();
             convertView = LayoutInflater.from(context).inflate(R.layout.every_day_item, null);
-            holder.finsh_number = convertView.findViewById(R.id.finsh_number);
-            holder.task_name = convertView.findViewById(R.id.task_name);
-            holder.finsh_get_gold = convertView.findViewById(R.id.finsh_get_gold);
-            holder.tv_stsk_number = convertView.findViewById(R.id.tv_stsk_number);
+            holder.finsh_number = (TextView)convertView.findViewById(R.id.finsh_number);
+            holder.task_name = (TextView)convertView.findViewById(R.id.task_name);
+            holder.finsh_get_gold = (TextView)convertView.findViewById(R.id.finsh_get_gold);
+            holder.tv_stsk_number = (TextView)convertView.findViewById(R.id.tv_stsk_number);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();

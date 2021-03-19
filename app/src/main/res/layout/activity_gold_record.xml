@@ -14,15 +14,18 @@
             android:id="@+id/gold_revenue"
             android:text="@string/income"
             android:textSize="26px"
-            android:layout_marginLeft="41px"
-            android:layout_marginTop="15px"
+            android:paddingLeft="41px"
+            android:paddingRight="20px"
+            android:paddingTop="15px"
             style="@style/textViewStyle"/>
 
         <TextView
             android:id="@+id/gold_exchange"
-            android:layout_marginTop="15px"
+            android:paddingTop="15px"
             android:textSize="26px"
-            android:layout_marginLeft="53px"
+            android:layout_marginLeft="12px"
+            android:paddingLeft="20px"
+            android:paddingRight="41px"
             android:textColor="@color/no_finsh_text"
             android:text="@string/exchange"
             style="@style/textViewStyle"/>

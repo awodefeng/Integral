@@ -3,10 +3,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import androidx.fragment.app.Fragment;
+import android.support.v4.app.Fragment;
 import com.xxun.adpter.GoldExchangeAdapter;
 import com.xxun.bean.IntergralBean;
 import com.xxun.util.DateFormatUtils;
@@ -14,11 +13,15 @@ import com.xxun.xunintegral.MyApplication;
 import com.xxun.xunintegral.R;
 import java.util.Date;
 import java.util.List;
-
+import android.widget.ImageView;
+import android.content.Intent;
+import android.content.ComponentName;
+import android.widget.TextView;
 public class GoldExchangeFragment extends Fragment {
     private ListView lv_exchange;
     private LinearLayout mo_gold_exchange;
-    private ImageView go_exchange;
+    private ImageView exchangeClock;
+    private TextView tv_exchange;
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.gold_tab2, container, false);
@@ -30,7 +33,7 @@ public class GoldExchangeFragment extends Fragment {
     private void inidata() {
         List<IntergralBean> igbeanList = new MyApplication().getIgbeanList();
         if(igbeanList!=null && igbeanList.size()!=0) {
-            for (int i = 0; i < igbeanList.size(); i++)  {//外循环是循环的次数
+            for (int i = 0; i < igbeanList.size(); i++)  {//ÍâÑ­»·ÊÇÑ­»·µÄŽÎÊý
                     if (igbeanList.get(i).getType() == 1) {
                         igbeanList.remove(i);
                         i--;
@@ -40,13 +43,14 @@ public class GoldExchangeFragment extends Fragment {
             GoldExchangeAdapter exchangeAdapter = new GoldExchangeAdapter(getActivity(),orderList);
             if(exchangeAdapter!=null){
                 lv_exchange.setAdapter(exchangeAdapter);
+                tv_exchange.setVisibility(View.GONE);
             }
             if(orderList.size()==0){
-                mo_gold_exchange.setVisibility(View.VISIBLE);
+                tv_exchange.setVisibility(View.VISIBLE);
                 lv_exchange.setVisibility(View.GONE);
             }
         }else {
-            mo_gold_exchange.setVisibility(View.VISIBLE);
+            tv_exchange.setVisibility(View.VISIBLE);
             lv_exchange.setVisibility(View.GONE);
         }
     }
@@ -70,8 +74,24 @@ public class GoldExchangeFragment extends Fragment {
         return igbeanList;
     }
     private void initview(View view) {
-        lv_exchange = view.findViewById(R.id.lv_exchange);
-        mo_gold_exchange = view.findViewById(R.id.mo_gold_exchange);
-        go_exchange = view.findViewById(R.id.go_exchange);
+        lv_exchange = (ListView)view.findViewById(R.id.lv_exchange);
+        mo_gold_exchange = (LinearLayout)view.findViewById(R.id.mo_gold_exchange);
+        tv_exchange = (TextView) view.findViewById(R.id.tv_exchange);
+        exchangeClock = (ImageView) view.findViewById(R.id.exchangeclock);
+        exchangeClock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+				ComponentName componetName = new ComponentName(
+                "com.xxun.xunlauncher",
+                "com.xxun.xunlauncher.activity.ThmeShopActivity");
+				Intent intent= new Intent();
+				//Bundle bundle = new Bundle();
+				//bundle.putString("arge1", "这是跳转过来的！来自apk1");
+				//intent.putExtras(bundle);
+				intent.setComponent(componetName);
+				startActivity(intent);
+            }
+        });
+
     }
 }

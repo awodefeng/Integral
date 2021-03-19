@@ -40,5 +40,7 @@
         android:src="@drawable/shape"
         android:layout_width="68px"
         android:layout_height="68px"/>
+    
+
 
 </FrameLayout>

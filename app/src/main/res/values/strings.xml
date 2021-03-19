@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">XunIntegral</string>
+    <string name="app_name">金币</string>
     <string name="my_gold_text">我的金币</string>
     <string name="my_gold">0</string>
     <string name="every_day_task">每日任务</string>
@@ -16,4 +16,7 @@
     <string name="exhange_gold">暂无金币消耗</string>
     <string name="lucky_bag_exchange_full_toast">已兑换过，请明日再来</string>
     <string name="step_finsh">计步达标</string>
+    <string name="finsh">完成</string>
+    <string name="stsk_number">0/1</string>
+    <string name="finshi_state_activity">完成状态界面</string>
 </resources>

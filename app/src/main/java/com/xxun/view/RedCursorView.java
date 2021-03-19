@@ -1,14 +1,10 @@
 package com.xxun.view;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
-
-import androidx.annotation.Nullable;
-
 import com.xxun.xunintegral.R;
 
 public class RedCursorView extends View {
@@ -21,12 +17,12 @@ public class RedCursorView extends View {
         super(context);
     }
 
-    public RedCursorView(Context context, @Nullable AttributeSet attrs) {
+    public RedCursorView(Context context,AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public RedCursorView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public RedCursorView(Context context,AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }

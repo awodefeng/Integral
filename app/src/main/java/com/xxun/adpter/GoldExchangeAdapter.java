@@ -6,11 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
 import com.xxun.bean.IntergralBean;
 import com.xxun.xunintegral.MyApplication;
 import com.xxun.xunintegral.R;
-
 import java.util.List;
 import java.util.Map;
 
@@ -52,15 +50,15 @@ public class GoldExchangeAdapter extends BaseAdapter {
         if(convertView==null){
             holder = new ViewHolder();
             convertView =LayoutInflater.from(context).inflate(R.layout.fragment_gold_tab1,null);
-            holder.open_box = convertView.findViewById(R.id.open_box);
-            holder.tv_datastamp = convertView.findViewById(R.id.tv_datastamp);
-            holder.get_gold = convertView.findViewById(R.id.get_gold);
+            holder.open_box = (TextView)convertView.findViewById(R.id.open_box);
+            holder.tv_datastamp = (TextView)convertView.findViewById(R.id.tv_datastamp);
+            holder.get_gold = (TextView)convertView.findViewById(R.id.get_gold);
             convertView.setTag(holder);
         }else {
             holder = (ViewHolder) convertView.getTag();
         }
-        Map<Integer, String> map = new MyApplication().getruleNametoId();
-        holder.open_box.setText(map.get(igbeanList.get(position).getModuleid()));
+
+        holder.open_box.setText(igbeanList.get(position).getExchangeName());
         String timestamp = igbeanList.get(position).getTimestamp();
         if(!TextUtils.isEmpty(timestamp)){
             //截取后14位

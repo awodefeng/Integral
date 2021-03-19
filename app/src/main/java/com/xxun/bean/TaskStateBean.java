@@ -3,7 +3,7 @@ package com.xxun.bean;
 public class TaskStateBean {
     private String taskName;  //任务名称
     private String moduleid;//用来标识是哪个模块用来标识是哪个模块
-    private int action; //需要多次触发事件 点赞（action=1)发布(action=2)
+   // private int action; //需要多次触发事件 点赞（action=1)发布(action=2)
     private int type;  //0金币收入1.金币兑换
     private String getgold; //根据规则算出获取金币
     private String timestamp; //完成时间
@@ -16,10 +16,9 @@ public class TaskStateBean {
         this.taskName = taskName;
     }
 
-    public TaskStateBean(String taskName, String moduleid, int action, int type, String getgold, String timestamp, int flag) {
+    public TaskStateBean(String taskName, String moduleid,int type, String getgold, String timestamp, int flag) {
         this.taskName = taskName;
         this.moduleid = moduleid;
-        this.action = action;
         this.type = type;
         this.getgold = getgold;
         this.timestamp = timestamp;
@@ -40,14 +39,6 @@ public class TaskStateBean {
 
     public void setModuleid(String moduleid) {
         this.moduleid = moduleid;
-    }
-
-    public int getAction() {
-        return action;
-    }
-
-    public void setAction(int action) {
-        this.action = action;
     }
 
     public int getType() {

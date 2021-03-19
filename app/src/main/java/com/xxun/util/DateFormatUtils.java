@@ -23,7 +23,28 @@ public class DateFormatUtils {
 		   return dateString;
 	 }
 
+	public static String getNowDateToStr(String format) {
+		SimpleDateFormat formatter = new SimpleDateFormat(format);
+		Date currentTime = new Date();
+		String dateString = formatter.format(currentTime);
+		return dateString;
+	}
 
+	public static boolean isToday(String timestamp) {
+		try {
+			SimpleDateFormat formatter1 = new SimpleDateFormat("yyyyMMdd");
+			SimpleDateFormat formatter2 = new SimpleDateFormat(Canstance.FORMATTIME);
+			Date currentTime = new Date();
+			String currentString = formatter1.format(currentTime);
+			if (currentString.equals(formatter1.format(formatter2.parse(timestamp)))) {
+				return true;
+			} else {
+				return false;
+			}
+		} catch (ParseException ex) {
+			return false;
+		}
+	}
 
 	//yyyy-MM-dd HH:mm:ss 格式时间转换成毫秒值
 	public static long getMinllisByDate(String time) {

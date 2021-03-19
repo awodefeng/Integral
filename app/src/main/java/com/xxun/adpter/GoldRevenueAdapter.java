@@ -42,9 +42,9 @@ public class GoldRevenueAdapter extends BaseAdapter {
         if(convertView==null){
             holder = new ViewHolder();
             convertView = LayoutInflater.from(context).inflate(R.layout.fragment_gold_tab1,null);
-            holder.open_box = convertView.findViewById(R.id.open_box);
-            holder.tv_datastamp = convertView.findViewById(R.id.tv_datastamp);
-            holder.get_gold = convertView.findViewById(R.id.get_gold);
+            holder.open_box = (TextView)convertView.findViewById(R.id.open_box);
+            holder.tv_datastamp = (TextView)convertView.findViewById(R.id.tv_datastamp);
+            holder.get_gold = (TextView)convertView.findViewById(R.id.get_gold);
             convertView.setTag(holder);
         }else {
             holder = (ViewHolder) convertView.getTag();

@@ -7,9 +7,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-
-import androidx.fragment.app.Fragment;
-
+import android.support.v4.app.Fragment;
 import com.xxun.adpter.GoldRevenueAdapter;
 import com.xxun.bean.IntergralBean;
 import com.xxun.util.DateFormatUtils;
@@ -41,10 +39,10 @@ public class GoldRevenueFragment extends Fragment {
         return view;
     }
 
-    private void initdata() {
+   private void initdata() {
         List<IntergralBean> igbeanList = new MyApplication().getIgbeanList();
         if(igbeanList!=null && igbeanList.size()!=0) {
-            for (int i = 0; i < igbeanList.size(); i++)  {//外循环是循环的次数
+            for (int i = 0; i < igbeanList.size(); i++)  {//ÍâÑ­»·ÊÇÑ­»·µÄŽÎÊý
                     if (igbeanList.get(i).getType() == 0) {
                         igbeanList.remove(i);
                         i--;
@@ -85,8 +83,8 @@ public class GoldRevenueFragment extends Fragment {
     }
 
     private void inintview(View view) {
-        gRList = view.findViewById(R.id.goldRevenueList);
-        no_get_gold = view.findViewById(R.id.no_get_gold);
+        gRList = (ListView)view.findViewById(R.id.goldRevenueList);
+        no_get_gold = (LinearLayout)view.findViewById(R.id.no_get_gold);
     }
 
     @Override

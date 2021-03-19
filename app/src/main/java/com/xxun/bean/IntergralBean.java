@@ -7,20 +7,29 @@ package com.xxun.bean;
 public class IntergralBean {
     private String taskName;  //任务名称
     private int moduleid;//用来标识是哪个模块用来标识是哪个模块
-    private int action; //需要多次触发事件 点赞（action=1)发布(action=2)
+    //private int action; //需要多次触发事件 点赞（action=1)发布(action=2)
     private int type;  //0金币收入1.金币兑换
     private int getgold; //根据规则算出获取金币
     private String timestamp; //完成时间
     private int flag;   //0上传 1.表示未上传过  默认为1
+    private String exchangeName;//兑换表盘的名称
 
-    public IntergralBean(String taskName,int moduleid, int action, int type, int getgold, String timestamp, int flag) {
+    public IntergralBean(String taskName,int moduleid, int type, int getgold, String timestamp, int flag, String exchangeName) {
         this.taskName = taskName;
         this.moduleid = moduleid;
-        this.action = action;
         this.type = type;
         this.getgold = getgold;
         this.timestamp = timestamp;
         this.flag = flag;
+        this.exchangeName = exchangeName;
+    }
+
+    public String getExchangeName() {
+        return exchangeName;
+    }
+
+    public void setExchangeName(String exchangeName) {
+        this.exchangeName = exchangeName;
     }
 
     public String getTaskName() {
@@ -42,14 +51,6 @@ public class IntergralBean {
     public void setModuleid(int moduleID) {
         this.moduleid = moduleID;
     }
-
-    public int getAction() {
-            return action;
-        }
-
-        public void setAction(int action) {
-            this.action = action;
-        }
 
         public int getType() {
             return type;

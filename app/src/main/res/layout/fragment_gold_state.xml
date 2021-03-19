@@ -8,6 +8,6 @@
         android:textSize="30dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="完成状态界面"/>
+        android:text="@string/finshi_state_activity"/>
 
 </LinearLayout>
